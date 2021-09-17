@@ -19,9 +19,13 @@
 		margin:0;
 		padding:0;
 		color: whitesmoke;
-		background-color: darkslategrey;
 	}
-
+	
+	body {
+		background-color: darkslategrey;
+		overflow-x: hidden;
+	}
+	
 	section {
 		position: relative;
 		display: flex;
@@ -30,20 +34,85 @@
 		min-height: 400px;
 		padding: 100px 20vw;
 	}
+	
+	.blue {
+		background-color: rgb(50, 50, 168);
+	}
+
+	.bubble {
+
+	}
+
+	.bubble::after {
+		content: '';
+		border-top-left-radius: 50% 100%;
+		border-top-right-radius: 50% 100%;
+		position: absolute;
+		bottom: 0;
+		height: 50%;
+		width: 100%;
+		background-color: rgb(59, 56, 51);
+	}
+	
+	.curve {
+		position:absolute;
+		height: 225px;
+		width: 100%;
+		bottom: 0;
+	}
+
+	.curve::before {
+		content: '';
+		display: block;
+		position: absolute;
+		border-radius: 100% 50%;
+		width: 55%;
+		height: 100%;
+		background-color: rgb(50, 50, 168);
+		transform: translate(85%, 60%);
+	}
+	
+	.curve::after {
+		content: '';
+		display: block;
+		position: absolute;
+		border-radius: 100% 50%;
+		width: 55%;
+		height: 100%;
+		background-color: darkslategrey;
+		transform: translate(-4%, 40%);
+		z-index: 1;
+	}
+	
+	.dark {
+		background-color: rgb(59, 56, 51);
+	}
+
+	.pink {
+		background-color: rgb(223, 141, 154);
+	}
+
+	.red {
+		background-color: rgb(216, 49, 49);
+	}
+
 
 </style>
 
 <body>
 	
-	<section>
+	<section class='blue'>
 		<h1>Nice Curves</h1>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe beatae dolor rerum aut doloremque minima quaerat nesciunt, facere a ducimus ipsam dolorum laudantium ipsum voluptas eveniet quod qui quidem exercitationem?</p>
+		<div class="curve"></div>
 	</section>
-	<section>
+
+	<section class='bubble'>
 		<h1>Nice Curves</h1>
 		<p>Tempora ipsam molestias placeat deleniti reprehenderit nobis, saepe, totam sint similique alias repellat ex suscipit mollitia exercitationem quas consectetur architecto animi? Sit libero quidem dolore repudiandae pariatur porro fugit delectus?</p>
 	</section>
-	<section>
+
+	<section class='dark' >
 		<h1>Nice Curves</h1>
 		<p>Eius sed quia deserunt ullam nobis, quas eligendi? Culpa architecto ipsa harum dolores quas quam praesentium nam. Ipsum sapiente totam, quod natus, dolores recusandae sed atque quaerat alias nemo illum.</p>
 	</section>
